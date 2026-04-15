@@ -59,12 +59,9 @@ ________________
 	1
 	Створено всі розділи звіту
 	2
-	
-
-	
-
-	
-
+	15.04.2026
+	2
+	Додаток В
 	________________
 
 
@@ -133,56 +130,51 @@ ________________
 Основні етапи:
 1. Створення базових інтерфейсів
 Спочатку визначаємо інтерфейс для нашої системи, яка очікує отримати аналітику на основі XML.
-# Цільовий інтерфейс (Target)
-class AnalyticsLibraryInterface:
-    def analyze_data(self, xml_data: str) -> str:
-        pass
+1 # Цільовий інтерфейс (Target)
+2 class AnalyticsLibraryInterface:
+3    def analyze_data(self, xml_data: str) -> str:
+4        pass
 2. Реалізація конкретних класів
 Тепер маємо сторонній сервіс (Adaptee), який працює тільки з JSON, та сам Адаптер.
-import json
-import xml.etree.ElementTree as ET
-
-
-# Стороння бібліотека (Adaptee) - Несумісний інтерфейс
-class AdvancedJSONAnalytics:
-    def display_charts(self, json_data: dict) -> str:
-        # Логіка побудови графіка на основі JSON
-        return f"Графік успішно побудовано за даними: {json_data}"
-
-
-# Клас Адаптер
-class XMLToJSONAdapter(AnalyticsLibraryInterface):
-    def __init__(self, analytics_service: AdvancedJSONAnalytics):
-        self._analytics_service = analytics_service
-
-
-    # Реалізуємо метод, який очікує клієнт (XML)
-    def analyze_data(self, xml_data: str) -> str:
-        # Етап 1: Конвертація з XML у зрозумілий формат (Словник/JSON)
-        root = ET.fromstring(xml_data)
-        json_ready_data = {child.tag: child.text for child in root}
-        
-        # Етап 2: Виклик методу сторонньої бібліотеки
-        return self._analytics_service.display_charts(json_ready_data)
+1 import json
+2 import xml.etree.ElementTree as ET
+3
+4 # Стороння бібліотека (Adaptee) - Несумісний інтерфейс
+5 class AdvancedJSONAnalytics:
+6    def display_charts(self, json_data: dict) -> str:
+7        # Логіка побудови графіка на основі JSON
+8        return f"Графік успішно побудовано за даними: {json_data}"
+9
+10 # Клас Адаптер
+11 class XMLToJSONAdapter(AnalyticsLibraryInterface):
+12    def __init__(self, analytics_service: AdvancedJSONAnalytics):
+13        self._analytics_service = analytics_service
+14
+15    # Реалізуємо метод, який очікує клієнт (XML)
+16    def analyze_data(self, xml_data: str) -> str:
+17        # Етап 1: Конвертація з XML у зрозумілий формат (Словник/JSON)
+18        root = ET.fromstring(xml_data)
+19        json_ready_data = {child.tag: child.text for child in root}
+20        
+21        # Етап 2: Виклик методу сторонньої бібліотеки
+22        return self._analytics_service.display_charts(json_ready_data)
 3. Демонстрація використання
 У клієнтському коді ми працюємо через Адаптер, передаючи звичний нам XML.
-if __name__ == "__main__":
-    # Наші дані у звичному форматі XML
-    my_xml_data = "<data><sales>1500</sales><profit>300</profit></data>"
-
-
-    # Створюємо екземпляр сторонньої бібліотеки
-    json_service = AdvancedJSONAnalytics()
-
-
-    # Створюємо адаптер, передаючи йому сторонню бібліотеку
-    adapter = XMLToJSONAdapter(json_service)
-
-
-    # Клієнт передає XML, але все успішно працює!
-    result = adapter.analyze_data(my_xml_data)
-    print(result) 
-    # Вивід: Графік успішно побудовано за даними: {'sales': '1500', 'profit': '300'}
+1 if __name__ == "__main__":
+2    # Наші дані у звичному форматі XML
+3    my_xml_data = "<data><sales>1500</sales><profit>300</profit></data>"
+4
+5    # Створюємо екземпляр сторонньої бібліотеки
+6    json_service = AdvancedJSONAnalytics()
+7
+8    # Створюємо адаптер, передаючи йому сторонню бібліотеку
+9    adapter = XMLToJSONAdapter(json_service)
+10
+11    # Клієнт передає XML, але все успішно працює!
+12    result = adapter.analyze_data(my_xml_data)
+13    print(result) 
+14    # Вивід: Графік успішно побудовано за даними: {'sales': '1500', 
+15 'profit': '300'}
 Як бачимо, завдяки Адаптеру наша система продовжує працювати з XML, а стороння бібліотека отримує потрібний їй JSON.
 3.5 Організація GitHub-репозиторію
 * Назва репозиторію: __________________
@@ -279,3 +271,10 @@ ________________
 Рисунок Б.10 – Використання у коді
   
 Рисунок Б.11 – Висновки
+________________
+
+
+ДОДАТОК В
+Назва інструменту та версія: Gemini 3 Pro;
+Мета використання: Створення прикладів коду на мові Python для наочної демонстрації реалізації патерну;
+Внесок автора: Код було перевірено на логічність, доречність та загальну відповідність до ідеї роботи.
