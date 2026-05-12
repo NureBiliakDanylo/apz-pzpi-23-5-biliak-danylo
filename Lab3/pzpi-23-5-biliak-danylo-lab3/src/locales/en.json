@@ -1,0 +1,112 @@
+{
+  "common": {
+    "loading": "Loading sensors...",
+    "error_load": "Failed to load sensors. Make sure the server is running on port 3000.",
+    "active": "Active",
+    "inactive": "Inactive",
+    "details": "Details",
+    "last_seen": "Last seen",
+    "never": "Never",
+    "no_sensors": "No sensors registered yet. Start by adding a new sensor!"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "register": "Register Sensor",
+    "search": "Search",
+    "admin": "Admin Settings"
+  },
+  "dashboard": {
+    "title": "Sensor Dashboard",
+    "add_sensor": "Add Sensor"
+  },
+  "register": {
+    "title": "Register New Sensor",
+    "name": "Sensor Name",
+    "location": "Description / Internal Location",
+    "placeholder_name": "e.g. Weather Station A",
+    "placeholder_location": "e.g. Rooftop, Garden",
+    "submit": "Register Sensor",
+    "submitting": "Registering...",
+    "success_title": "Sensor Registered Successfully!",
+    "success_key": "Your sensor API key is:",
+    "success_important": "Important: Save this key now! You will need it to send data from your sensor.",
+    "go_to_dashboard": "Go to Dashboard",
+    "error_fail": "Failed to register sensor"
+  },
+  "search": {
+    "title": "Search Sensors by Location",
+    "placeholder": "Enter name of place (e.g. garden, rooftop, street)",
+    "submit": "Search",
+    "searching": "Searching...",
+    "no_found": "No sensors found in this location.",
+    "error_search": "An error occurred while searching.",
+    "view_data": "View Data",
+    "sensor_at": "Sensor at",
+    "unknown_city": "Unknown location"
+  },
+  "admin": {
+    "title": "Admin Settings",
+    "manage_sensors": "Manage All Sensors",
+    "description": "View system status and delete inactive or faulty sensors.",
+    "download_dump": "Download DB Dump",
+    "table": {
+      "name": "Name",
+      "id": "Internal ID",
+      "api_key": "API Key (Secret)",
+      "registered_at": "Registered At",
+      "actions": "Actions"
+    },
+    "delete": "Delete",
+    "delete_confirm": "Are you sure you want to delete sensor \"{{name}}\"? This will delete all its data and readings.",
+    "delete_success": "Sensor deleted successfully.",
+    "delete_fail": "Failed to delete sensor.",
+    "error_load": "Failed to load sensors for admin."
+  },
+  "detail": {
+    "sensor_not_found": "Sensor not found",
+    "error_load": "Failed to load sensor data.",
+    "hide_sim": "Hide Simulator",
+    "show_sim": "Simulate Sensor Data",
+    "simulator": {
+      "title": "IoT Device Simulator",
+      "description": "Simulate a real IoT device sending data to the server using its API key.",
+      "api_key": "API Key",
+      "api_key_placeholder": "Paste sensor API key here",
+      "temp": "Temperature (°C)",
+      "hum": "Humidity (%)",
+      "press": "Pressure (hPa)",
+      "city": "City Name (Optional)",
+      "city_placeholder": "Update location",
+      "submit": "Send Reading",
+      "key_required": "API Key is required for simulation!",
+      "success": "Reading sent successfully!",
+      "fail": "Simulation failed: "
+    },
+    "latest": {
+      "title": "Latest Reading",
+      "temp": "Temperature",
+      "hum": "Humidity",
+      "press": "Pressure",
+      "no_readings": "No readings available yet."
+    },
+    "forecast": {
+      "title": "Local Forecast",
+      "hours_ahead": "Hours Ahead:",
+      "update": "Update",
+      "update_fail": "Failed to update forecast",
+      "need_more_data": "At least 2 readings are required to generate a forecast.",
+      "prediction_for": "Prediction for",
+      "temp": "Temp:",
+      "hum": "Humidity:",
+      "press": "Pressure:",
+      "hour_unit": "h"
+    },
+    "history": {
+      "title": "Recent History",
+      "time": "Time",
+      "temp": "Temp",
+      "hum": "Humidity",
+      "press": "Pressure"
+    }
+  }
+}

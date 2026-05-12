@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Используем AppCompat тему, чтобы AppCompatActivity работала корректно -->
+    <style name="Theme.IoTHub" parent="Theme.AppCompat.DayNight.NoActionBar" />
+</resources>

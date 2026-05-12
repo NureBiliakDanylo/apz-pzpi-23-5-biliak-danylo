@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">IoTHub</string>
+    <string name="welcome">Welcome to IoTHub</string>
+    <string name="setup_instruction">Please enter your server IP address or domain to continue.</string>
+    <string name="server_url">Server URL</string>
+    <string name="connect">Connect</string>
+    
+    <string name="your_sensors">Your Sensors</string>
+    <string name="all_available_sensors">All Available Sensors</string>
+    <string name="refresh">Refresh</string>
+    <string name="settings">Settings</string>
+    <string name="my_sensors_tab">My Sensors</string>
+    <string name="discovery_tab">Discovery</string>
+    <string name="search_placeholder">Search by name or location...</string>
+    <string name="no_sensors_match">No sensors match your search.</string>
+    <string name="no_sensors_saved">No sensors saved yet. Go to Discovery to add some!</string>
+    <string name="no_sensors_found">No sensors found on server.</string>
+    <string name="last_seen">Last seen: %s</string>
+    
+    <string name="sensor_analytics">Sensor Analytics</string>
+    <string name="back">Back</string>
+    <string name="current_conditions">Current Conditions</string>
+    <string name="temp">Temp</string>
+    <string name="humidity">Humidity</string>
+    <string name="pressure">Pressure</string>
+    <string name="forecast">Forecast</string>
+    <string name="period_label">Period (1-24h)</string>
+    <string name="no_forecast">No forecast data available for this period.</string>
+    <string name="predicted_temp">Predicted Temp: %s</string>
+    <string name="predicted_humidity">Predicted Humidity: %d%%</string>
+    <string name="predicted_pressure">Predicted Pressure: %d hPa</string>
+    <string name="note">Note: %s</string>
+    <string name="recent_history">Recent History</string>
+    <string name="temp_trend">Temperature Trend (%s)</string>
+    <string name="humidity_trend">Humidity Trend (%%)</string>
+    <string name="pressure_trend">Pressure Trend (hPa)</string>
+    
+    <string name="configure_hub">Configure your IoTHub</string>
+    <string name="default_forecast_hours">Default Forecast Hours</string>
+    <string name="save_settings">Save Settings</string>
+    <string name="reset_connection">Reset Connection (Logout)</string>
+    <string name="language">Language</string>
+    <string name="temperature_unit">Temperature Unit</string>
+</resources>

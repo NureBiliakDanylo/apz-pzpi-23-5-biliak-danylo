@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">IoTHub</string>
+    <string name="welcome">Ласкаво просимо до IoTHub</string>
+    <string name="setup_instruction">Будь ласка, введіть IP-адресу або домен вашого сервера, щоб продовжити.</string>
+    <string name="server_url">URL сервера</string>
+    <string name="connect">Підключитися</string>
+    
+    <string name="your_sensors">Ваші сенсори</string>
+    <string name="all_available_sensors">Усі доступні сенсори</string>
+    <string name="refresh">Оновити</string>
+    <string name="settings">Налаштування</string>
+    <string name="my_sensors_tab">Мої сенсори</string>
+    <string name="discovery_tab">Пошук</string>
+    <string name="search_placeholder">Пошук за назвою або локацією...</string>
+    <string name="no_sensors_match">Сенсорів за вашим запитом не знайдено.</string>
+    <string name="no_sensors_saved">Сенсорів ще не збережено. Перейдіть до Пошуку, щоб додати!</string>
+    <string name="no_sensors_found">На сервері не знайдено жодного сенсора.</string>
+    <string name="last_seen">Востаннє бачили: %s</string>
+    
+    <string name="sensor_analytics">Аналітика сенсора</string>
+    <string name="back">Назад</string>
+    <string name="current_conditions">Поточні умови</string>
+    <string name="temp">Темп</string>
+    <string name="humidity">Вологість</string>
+    <string name="pressure">Тиск</string>
+    <string name="forecast">Прогноз</string>
+    <string name="period_label">Період (1-24г)</string>
+    <string name="no_forecast">Немає даних прогнозу для цього періоду.</string>
+    <string name="predicted_temp">Прогноз темп.: %s</string>
+    <string name="predicted_humidity">Прогноз вологості: %d%%</string>
+    <string name="predicted_pressure">Прогноз тиску: %d гПа</string>
+    <string name="note">Примітка: %s</string>
+    <string name="recent_history">Остання історія</string>
+    <string name="temp_trend">Тренд температури (%s)</string>
+    <string name="humidity_trend">Тренд вологості (%%)</string>
+    <string name="pressure_trend">Тренд тиску (гПа)</string>
+    
+    <string name="configure_hub">Налаштуйте ваш IoTHub</string>
+    <string name="default_forecast_hours">Години прогнозу за замовчуванням</string>
+    <string name="save_settings">Зберегти налаштування</string>
+    <string name="reset_connection">Скинути з’єднання (Вихід)</string>
+    <string name="language">Мова</string>
+    <string name="temperature_unit">Одиниця температури</string>
+</resources>
