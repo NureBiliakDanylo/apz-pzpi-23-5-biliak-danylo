@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useAuth } from '../context/AuthContext';
@@ -12,8 +12,13 @@ const RegisterAdmin: React.FC = () => {
   const { checkRegistration, isRegistered } = useAuth();
   const navigate = useNavigate();
 
+  useEffect(() => {
+    if (isRegistered) {
+      navigate('/login');
+    }
+  }, [isRegistered, navigate]);
+
   if (isRegistered) {
-    navigate('/login');
     return null;
   }
 
@@ -24,7 +29,7 @@ const RegisterAdmin: React.FC = () => {
       return;
     }
     try {
-      await axios.post('http://localhost:3000/auth/register', { username, password });
+      await axios.post('http://localhost:8080/auth/register', { username, password, role: 'admin' });
       await checkRegistration();
       navigate('/login');
     } catch (err: any) {

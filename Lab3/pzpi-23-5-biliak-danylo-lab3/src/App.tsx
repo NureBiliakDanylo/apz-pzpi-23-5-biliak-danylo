@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
-import { Cloud, LayoutDashboard, PlusCircle, Settings, Search, Globe, LogOut } from 'lucide-react';
+import { Cloud, LayoutDashboard, PlusCircle, Settings, Search, Globe, LogOut, LogIn } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import Dashboard from './pages/Dashboard';
 import RegisterSensor from './pages/RegisterSensor';
@@ -83,7 +83,7 @@ function AppContent() {
               </span>
             </button>
 
-            {token && (
+            {token ? (
               <button 
                 onClick={logout} 
                 title="Logout"
@@ -93,6 +93,16 @@ function AppContent() {
               >
                 <LogOut size={20} />
               </button>
+            ) : (
+              <Link 
+                to="/login" 
+                title="Login"
+                style={{ color: 'inherit', display: 'flex', alignItems: 'center', padding: '0.5rem', borderRadius: 'var(--radius-md)', transition: 'background 0.2s' }}
+                onMouseOver={(e) => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.1)'}
+                onMouseOut={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+              >
+                <LogIn size={20} />
+              </Link>
             )}
           </div>
         </nav>

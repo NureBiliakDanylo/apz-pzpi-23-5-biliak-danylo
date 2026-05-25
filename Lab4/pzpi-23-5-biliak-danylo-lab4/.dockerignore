@@ -1,0 +1,15 @@
+node_modules
+npm-debug.log
+.env
+.git
+.gitignore
+backups
+load-tests
+Dockerfile
+docker-compose.yml
+nginx
+README.md
+README_LAB4.md
+database.db
+admin_auth.json
+database_dump.sql

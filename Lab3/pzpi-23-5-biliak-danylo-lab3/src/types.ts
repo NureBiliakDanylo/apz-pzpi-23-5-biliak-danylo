@@ -37,3 +37,16 @@ export interface LocalForecast {
   predicted_pressure: number;
   note: string;
 }
+
+export interface Backup {
+  filename: string;
+  createdAt: string;
+  size: number;
+}
+
+export interface User {
+  id: number;
+  username: string;
+  role: string;
+  created_at: string;
+}

@@ -1,0 +1,39 @@
+config:
+  target: "http://localhost:8080"
+  phases:
+    - duration: 60
+      arrivalRate: 10
+      name: Warm up
+    - duration: 100
+      arrivalRate: 20
+      rampTo: 100
+      name: Heavy load
+  payload:
+    path: "sensors.csv"
+    fields:
+      - "name"
+      - "location"
+
+scenarios:
+  - name: "Sensor registration and data reporting"
+    flow:
+      - post:
+          url: "/sensors"
+          json:
+            name: "{{ name }}"
+            location: "{{ location }}"
+          capture:
+            - json: "$.api_key"
+              as: "apiKey"
+      - think: 1
+      - loop:
+          - post:
+              url: "/readings"
+              headers:
+                x-api-key: "{{ apiKey }}"
+              json:
+                temperature: 22.5
+                humidity: 45
+                pressure: 1012
+          - think: 2
+        count: 5

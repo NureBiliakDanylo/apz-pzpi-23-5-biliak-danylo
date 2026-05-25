@@ -24,8 +24,8 @@ const Login: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:3000/auth/login', { username, password });
-      login(res.data.token);
+      const res = await axios.post('http://localhost:8080/auth/login', { username, password });
+      login(res.data.token, res.data.role, username);
       navigate('/admin');
     } catch (err: any) {
       setError(err.response?.data?.error || 'Login failed');
